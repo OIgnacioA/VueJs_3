@@ -1,15 +1,8 @@
 <template>
-  
-  <HelloWorld />
-
+  <router-view />
 </template>
 
 <script setup>
-import HelloWorld  from './components/HelloWorld.vue'
-
-
+// import { useRouter } from 'vue-router';
+// const router = useRouter();
 </script>
-
-<style>
-
-</style>

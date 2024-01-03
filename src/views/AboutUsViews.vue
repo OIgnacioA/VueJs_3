@@ -1,22 +1,29 @@
 <template>
-    <div class="about-us">
-      <h1>{{ pageTitle }}</h1>
-      <p>{{ loremIpsumText }}</p>
+  <div class="page">
+    <div class="header">
+      <!-- ... (código del header) ... -->
     </div>
+    <div class="txt_title">Roles y Descripciones</div>
+    <div v-for="role in roles" :key="role.id">
+      <div class="role-title">{{ role.nombre }}</div>
+      <div class="role-description">{{ role.descripcion }}</div>
+      <!-- Puedes agregar más información según tus necesidades -->
+    </div>
+  </div>
 </template>
-  
+
 <script setup>
-  import { ref } from 'vue';
-  
-  const pageTitle = ref('Acerca de Nosotros');
-  const loremIpsumText = ref('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
-  
-  // Puedes personalizar el texto de Lorem Ipsum según sea necesario.
+import { ref, onMounted } from 'vue';
+import RoleService from '@/services/Api';
+
+const roleService = new RoleService();
+const roles = ref([]);
+
+onMounted(async () => {
+  // Cargar roles y descripciones al montar la página
+  await roleService.fetchAllRoles();
+  roles.value = roleService.getRoles();
+});
 </script>
-  
-<style scoped>
-  .about-us {
-    text-align: center;
-  }
-</style>
+
   
