@@ -1,3 +1,4 @@
+// WeatherService.js
 import { ref } from 'vue';
 
 class WeatherService {
@@ -29,7 +30,7 @@ class WeatherService {
   }
 
   getWeatherData() {
-    return this.weatherData;
+    return this.weatherData.value;
   }
 }
 
