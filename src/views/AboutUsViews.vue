@@ -1,29 +1,28 @@
-<template>
-  <div class="page">
-    <div class="header">
-      <!-- ... (código del header) ... -->
-    </div>
-    <div class="txt_title">Roles y Descripciones</div>
-    <div v-for="role in roles" :key="role.id">
-      <div class="role-title">{{ role.nombre }}</div>
-      <div class="role-description">{{ role.descripcion }}</div>
-      <!-- Puedes agregar más información según tus necesidades -->
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { ref, onMounted } from 'vue';
-import RoleService from '@/services/Api';
+// Corrige la ruta de importación para el store
+import { useSimStore } from '@/store/clima'; // Asegúrate de que la ruta sea correcta
 
-const roleService = new RoleService();
-const roles = ref([]);
+// Corrige la ruta de importación para el servicio
+import WeatherService from '@/services/Api'; // Asegúrate de que la ruta sea correcta
 
+const simStore = useSimStore();
+const weatherService = new WeatherService();
+
+const selectedPais = ref(null);
+const paises = ['Argentina', 'Brasil', 'Chile', 'España', 'Francia', 'Italia', 'México', 'Perú', 'Estados Unidos', 'Canadá'];
+
+async function seleccionarPais() {
+  if (selectedPais.value) {
+    // Actualizar el clima al seleccionar un país
+    await weatherService.fetchWeather(selectedPais.value);
+  }
+}
+
+// Cargar la configuración y obtener el clima al montar el componente
 onMounted(async () => {
-  // Cargar roles y descripciones al montar la página
-  await roleService.fetchAllRoles();
-  roles.value = roleService.getRoles();
+  await simStore.loadConfig();
+  // Puedes agregar más lógica de inicialización aquí si es necesario
 });
 </script>
 
-  
