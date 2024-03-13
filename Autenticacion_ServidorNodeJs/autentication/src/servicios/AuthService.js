@@ -29,19 +29,21 @@ export default class AuthService {
       });
 
       const response = await res.json();
-
-
-      if ('errors' in response) {
-        
-        this.error.value = "Login failed";
-        return false;
-      }
-
       this.jwt.value = response.data.access_token;
-      return true;
+      return response;
 
-    } catch (error) {
-      console.log(error);
+    //   if ('errors' in response) {
+        
+    //     this.error.value = "Login failed";
+    //     return false;
+    //   }
+
+    
+    //   return true;
+
+     } catch (error) {
+       console.log(error);
     }
+
   }
 }

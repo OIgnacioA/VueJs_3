@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <h1>Hello World</h1>
+    <h1>App de VueJs  </h1>
+    <h3>con api a server Node Express local.</h3>
   </div>
 </template>
 

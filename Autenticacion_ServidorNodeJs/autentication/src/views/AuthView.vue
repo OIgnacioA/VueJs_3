@@ -17,35 +17,41 @@
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary" @click="authUser">Submit</button>
+        <button type="submit" class="btn btn-primary" @click.prevent="authUser">Submit</button>
 
         {{ email }}
         {{ password }}
 
     </div>
+    <div v-if="responseData" class="border border-dark rounded d-inline-block p-3">
+      <!-- Mostrar los datos de la respuesta del servidor -->
+      <p>Access Token: {{ responseData.access_token }}</p>
+      <p>Expires: {{ responseData.expires }}</p>
+      <p>Refresh Token: {{ responseData.refresh_token }}</p>
+    </div>
+  
     </form>
 </template>
 
 <script setup>
-
 import { ref } from 'vue'
 import AuthService from '../servicios/AuthService'
 
 let email = ref("")
 let password = ref("")
+let responseData = ref(null)
 
-const authUser= async () =>{
+const authUser = async () => {
+  const auth = new AuthService()
+  const response = await auth.login(email.value, password.value);
 
-    
-    const auth = new AuthService()
-    const success = await auth.login(email.value, password.value);
-
-    if(success){
-        alert('EXITO');
-    }else {
-        alert('login incorrecto');
-    }
-
+  if (response) {
+   
+    responseData.value = response.data; // Guardar los datos devueltos por el servidor
+    // Mostrar los datos devueltos por el servidor en la consola (puedes modificar esto según tus necesidades)
+      
+  } else {
+    alert('login incorrecto');
+  }
 }
-
 </script>
