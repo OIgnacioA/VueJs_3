@@ -1,0 +1,54 @@
+limpiar caché.
+
+ $ npm cache clean --force
+
+
+
+
+
+
+ Informe: 
+
+
+Resumen del Desarrollo y Solución de Problemas:(11-1-2024)
+
+Inicio del Proyecto:
+
+Se inició el proyecto desde cero utilizando npm install vue.
+Se eligió la forma manual de selección de características, incluyendo Babel, Router, Vuex, Linter/Formatter, y CSS Pre-processors.
+Se optó por Vue 3 con programación funcional, modo history del router, linting por defecto de errores cada vez que se guarda, y configuraciones específicas del proyecto.
+
+Problema Inicial:
+
+Se intentó implementar Pinia como sistema de gestión de estado, pero se encontraron problemas que dificultaron su implementación, lo que llevó a la decisión de cambiar a Vuex.
+
+Estructura del Proyecto:
+
+La estructura del proyecto incluye archivos para el router (router/index.js), el store Vuex (store/index.js), y componentes como App.vue.
+
+Carga de Datos desde JSON:
+
+Se creó un archivo JSON (assets/data/informacion.json) con la información necesaria.
+Se configuró Vuex para cargar datos desde el JSON y almacenarlos en el estado (store/index.js).
+
+Acceso Asíncrono a Datos:
+
+Se identificó un problema de asincronía al intentar acceder a los datos antes de que estuvieran cargados completamente.
+Se modificó el componente AboutView.vue para manejar la carga asíncrona de datos, mostrando un mensaje de carga mientras se espera.
+
+Solución Implementada:
+
+Se utilizó la función onMounted en el componente AboutView.vue para realizar la carga de datos después de que el componente se ha montado.
+Se empleó un condicional (v-if) para mostrar los datos solo cuando están disponibles, y un mensaje de carga (v-else) mientras se están cargando.
+
+Resultado Final:
+
+El proyecto ahora carga datos desde el JSON y los muestra correctamente en el componente AboutView.vue.
+Se implementaron cambios en la estructura y el manejo de datos para resolver el problema de asincronía y garantizar la correcta carga y visualización de datos.
+
+Nota:
+
+La implementación final utiliza Vuex como sistema de gestión de estado y se resolvieron problemas específicos relacionados con la carga asíncrona de datos en Vue.js 3.
+
+
+--------------------------------------

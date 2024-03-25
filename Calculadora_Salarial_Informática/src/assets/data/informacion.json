@@ -1,0 +1,912 @@
+{
+    "stat": true,
+    "data": {
+        "sueldo_min_base": 422685.05,
+        "rol_laboral": [
+            {
+                "id": "0447f54a-dd20-4505-afdc-d07079d8df4a",
+                "nombre": "Gerente Regional",
+                "descripcion": "Supervisa y gestiona las operaciones financieras y contables de una empresa a nivel nacional o en un país específico. Esto incluye la elaboración de informes financieros, análisis de costos, asegurar el cumplimiento de normativas y leyes locales, así como coordinar con otras áreas para garantizar la salud financiera y cumplir con los objetivos de la organización en ese país. También conocido como \"Country Manager\" o \"Country Controller\".",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 130
+            },
+            {
+                "id": "0675f99b-fddc-46d9-943d-e3472f02a324",
+                "nombre": "Gerente General",
+                "descripcion": "Lidera y coordina todas las operaciones y funciones claves de la organización, tomando decisiones estratégicas, gestionando recursos y representando los intereses de la empresa ante partes internas y externas. Su rol abarca la planificación, ejecución y supervisión para asegurar el éxito de los objetivos de la empresa.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 140
+            },
+            {
+                "id": "08244bb7-5cc0-4b5c-a5ad-f8a7d6d5ed9f",
+                "nombre": "Relaciones Públicas, Comunicaciones y Asuntos Institucionales TI",
+                "descripcion": "Asiste y colabora en las tareas relacionadas con los procedimientos y procesos comprendidos dentro de su área laboral. Brinda soporte a sus superiores, con el fin de obtener información para la operación de la empresa.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            },
+            {
+                "id": "1",
+                "nombre": "Programador/a de software",
+                "descripcion": "Responsable del desarrollo y diseño de software. Participa del proceso de programación/implementación a partir de especificaciones dadas, y ajustándose a tiempos y estándares de calidad y trabajo del proyecto. Incluye programadores mobile, web, desktop, etc. en cualquier stack tecnológico.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 120
+            },
+            {
+                "id": "10",
+                "nombre": "Soporte Técnico / Mesa de ayuda ",
+                "descripcion": "Asiste al usuario en las dudas sobre el uso o resolución de problemas de la aplicación, una vez que esta no se encuentre en desarrollo. Esta asistencia puede estar constituida tanto por la respuesta de consultas de uso como por la resolución de problemas que se presenten.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 100
+            },
+            {
+                "id": "11",
+                "nombre": "Analista de Datos",
+                "descripcion": "Diseña, implementa y optimiza una estrategia para el manejo de la información en la empresa o proyecto.\nEncargado de analizar datos cuantitativos y cualitativos del entorno digital, para extraer información de valor que ayude a tomar decisiones.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 120
+            },
+            {
+                "id": "12",
+                "nombre": "Analista de Recursos Humanos TI",
+                "descripcion": "Apoya a la organización, a través del conocimiento en la gestión del talento humano.\nFacilita los recursos requeridos por los empleados para cumplir con las exigencias de la empresa.\nSe encarga de la comunicación, motivación, desarrollo del liderazgo y desarrollo de otros.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 100
+            },
+            {
+                "id": "123130ef-155e-41bc-9c61-8f4372b6dfb3",
+                "nombre": "Gerente de Preventa",
+                "descripcion": "Se encarga de liderar la preparación y presentación de propuestas comerciales y técnicas antes de una venta, asegurando que se ajusten a las necesidades del cliente y maximicen las posibilidades de cierre exitoso. Trabaja en estrecha colaboración con el equipo de ventas para ofrecer soluciones atractivas y competitivas.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 120
+            },
+            {
+                "id": "13",
+                "nombre": "Analista de Marketing y/o Ventas TI",
+                "descripcion": "Investiga el mercado e identifica nuevas oportunidades de una empresa a través de productos innovadores. \nDesarrolla de estrategias de marketing incluida la imagen de marca.\nDesarrolla de estrategias de ventas y gestiona el servicio postventa.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 100
+            },
+            {
+                "id": "1db15595-3a56-4d53-a9ee-9a1491ac9136",
+                "nombre": "Servicios Generales y Mantenimiento",
+                "descripcion": "El trabajador asiste en la ejecución de tareas relacionadas a servicios generales; en la ejecución de tareas de mantenimiento correctivo y preventivo sobre componentes, máquinas, equipos e instalaciones y/o contratar y supervisar el cumplimiento de los servicios de terceros para dichos fines. Se incluye en estas funciones al personal de Maestranza.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 100
+            },
+            {
+                "id": "2",
+                "nombre": "Analista de Calidad de Software",
+                "descripcion": "Realiza el control de calidad del producto de software. Construye el plan de testing, diseña casos de prueba, gestiona los ambientes de prueba, genera los datos de prueba, ejecuta y documenta pruebas, reportando y siguiendo los incidentes encontrados, usando las herramientas apropiadas de acuerdo a los estándares de trabajo de donde se desempeñe.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            },
+            {
+                "id": "3",
+                "nombre": "Analista de Producto / Negocio TI",
+                "descripcion": "Establece los requisitos funcionales del sistema. Analiza los negocios y procesos del cliente para entender y descubrir sus necesidades de información y, con base a los mismos, define los requerimientos y funcionalidades del software que les dé solución, diseñando y documentando en detalle dichos requisitos funcionales.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            },
+            {
+                "id": "4",
+                "nombre": "Analista de Seguridad Informática",
+                "descripcion": "Responsable de dar el asesoramiento sobre la selección, diseño, implementación y operación de los controles de seguridad y las técnicas de manejo de seguridad, relativas a cualquier aspecto de los sistemas de información. Provee un marco de metodología y estandarización de seguridad de la información a los proyectos, detectando en forma temprana causas de desvíos, implementando y administrando sistemas, políticas y normativas de seguridad informática.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 120
+            },
+            {
+                "id": "5",
+                "nombre": "DevOps / Administrador/a de Sistemas",
+                "descripcion": "Gestiona los procesos de CI/CD, redacta especificaciones y documentación para las funciones del lado del servidor, supervisa proyectos, administra la infraestructura y garantiza que la cultura de operaciones de desarrollo se adopte correctamente.\nRealiza el mantenimiento a los equipos y sistemas informáticos que puedan presentar fallas. En tal sentido, sus responsabilidades comprenden la instalación, configuración y actualización del hardware y el software.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 120
+            },
+            {
+                "id": "6",
+                "nombre": "Diseñador/a de UX / UI",
+                "descripcion": "Diseña los medios, procesos y formas en que las personas interactúan con sistemas de información. Se encarga de todo lo que afecta a la interacción o diálogo de una persona con un sistema.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            },
+            {
+                "id": "62dd65d2-da90-4b81-b85c-a7bdfca53902",
+                "nombre": "Recepcionista",
+                "descripcion": "Recibe, atiende y orienta a todos los visitantes a las instalaciones. Se encarga de atender, responder y distribuir llamados telefónicos y correspondencia.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 100
+            },
+            {
+                "id": "6694ec5d-d543-4f6b-8c4c-5c0d5c85f782",
+                "nombre": "Analista en Marketing Digital",
+                "descripcion": "Investiga el mercado e identifica nuevas oportunidades de una empresa a través de productos innovadores. Desarrolla estrategias de marketing incluida la imagen de marca. Desarrolla estrategias de ventas y gestiona el servicio postventa. Monitoriza y analiza los indicadores clave en materia de ventas.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            },
+            {
+                "id": "669dd8f4-e08d-4710-b316-e86099e46054",
+                "nombre": "Gerente Comercial",
+                "descripcion": "Dirige y supervisa las estrategias y actividades de ventas, marketing y desarrollo de negocios. Su labor incluye la gestión de equipos de ventas, establecimiento de metas, análisis de mercado, negociación de contratos y búsqueda de oportunidades para aumentar los ingresos y la expansión del negocio.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 130
+            },
+            {
+                "id": "7",
+                "nombre": "Administrador/a de Redes e Infraestructura",
+                "descripcion": "Administra la operación, seguridad y mantenimiento de la infraestructura de redes asegurando la calidad y performance de los servicios de la organización.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 120
+            },
+            {
+                "id": "7adeb360-b674-442e-b87c-5d62b50d46c1",
+                "nombre": "Administrativo TI",
+                "descripcion": "Son funciones principales del trabajador asistir y colaborar en las tareas relacionadas con la gestión administrativa, contable y financiera.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            },
+            {
+                "id": "8",
+                "nombre": "Gestor/a de Proyectos TI",
+                "descripcion": "Conduce las actividades diarias del equipo del proyecto ejerciendo un seguimiento y control sobre resultados, plazos y calidad. Mantiene la relación con usuarios y cliente, motiva y brinda apoyo a los integrantes del equipo. Gestiona los recursos necesarios, tomando las decisiones operativas necesarias para mantener el proyecto en tiempo, alcances y costo.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            },
+            {
+                "id": "84234522-b830-407b-98cd-b4e84f35e442",
+                "nombre": "Gerente de Oficina",
+                "descripcion": "Supervisa y coordina las actividades diarias de la oficina, asegurando su funcionamiento eficiente. Esto incluye tareas como la gestión de suministros, coordinación de reuniones, organización de espacios de trabajo, administración de agendas y apoyo a los empleados en diversas áreas administrativas. También conocido como \"Office Manager\".",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 120
+            },
+            {
+                "id": "9",
+                "nombre": "Implementador/a de Proyectos TI",
+                "descripcion": "Mantiene la integridad de la configuración a lo largo del ciclo de vida de los componentes de software, mediante actividades de planificación, despliegue, control y auditoría. Desplega los componentes de software entre los diferentes ambientes pre-productivos y productivos, planificándolos en releases programados en el tiempo.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            },
+            {
+                "id": "984d9c99-a748-472f-be88-6d6377d82d19",
+                "nombre": "Gerente de Soporte al Negocio",
+                "descripcion": "Facilita servicios y recursos esenciales para que las funciones se desarrollen de manera eficiente. Supervisa áreas como tecnología, infraestructura, recursos humanos y administración para asegurar que estén alineadas con los objetivos y necesidades estratégicas de la empresa. Además, coordina y optimiza procesos internos para mejorar la productividad y la eficacia operativa.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 120
+            },
+            {
+                "id": "9fb0644f-b035-44f6-bd25-4c12096d5f46",
+                "nombre": "Diseñador de línea de producción de Hardware",
+                "descripcion": "Son funciones principales del trabajador todo lo relacionado a la creación de diseños de línea de producción que maximicen la eficiencia y la productividad, la identificación de cuellos de botella y la implementación de soluciones para mejorar el flujo de trabajo en la misma.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 120
+            },
+            {
+                "id": "9fe87eee-c4f6-4250-909a-3a8db7beebf1",
+                "nombre": "Gerente de Operaciones",
+                "descripcion": "Supervisa y coordina las actividades diarias de la organización para garantizar una eficiencia óptima en la producción, distribución y entrega de productos o servicios. Se enfoca en la gestión de recursos, control de costos, mejora de procesos y mantenimiento de la calidad, contribuyendo al logro de los objetivos operativos y estratégicos de la empresa.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 130
+            },
+            {
+                "id": "ac1884a4-a62a-4bc8-b587-64eac8b79988",
+                "nombre": "Soporte de línea de producción de Hardware",
+                "descripcion": "Son funciones principales del trabajador monitorear, asistir y colaborar en las tareas relacionadas a las líneas de producción encargadas de la fabricación, montaje, reparación e instalación de equipos informáticos (Hardware), brindando soluciones a errores y/o fallas en las mismas.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            },
+            {
+                "id": "e210b1fa-e941-49cf-9962-eaa9ae0e5980",
+                "nombre": "Control de calidad de Hardware",
+                "descripcion": "Son funciones principales del trabajador, la puesta a prueba de los equipos luego de su paso por la línea de montaje para detectar posibles errores.",
+                "tareas": null,
+                "requisitos": null,
+                "salario_relativo": 110
+            }
+        ],
+        "textos": [
+            {
+                "id": "DESC_ADICIONALES",
+                "text": "En base al salario determinado por el sueldo minimo propuesto, cada rol y categoría; se mejora el salario final mediante adicionales de acuerdo a tu posición actual."
+            },
+            {
+                "id": "DESC_CATEGORIAS",
+                "text": "Clasificacion profesional de los trabajadores que establece la autonomía de la persona para realizar las tareas asignadas y el alcance concreto de la prestación laboral que puede exigir el empleador. "
+            },
+            {
+                "id": "DESC_ROLES",
+                "text": "Comprende las tareas específicas a realizar en un puesto determinado a fin de asegurar la productividad y resultados del resto del equipo."
+            },
+            {
+                "id": "DESC_SUELDO_MIN",
+                "text": "El sueldo minimo se desprende del convenio de encuadramiento propuesto por AGC aplicable a toda empresa del ámbito privado cuya actividad principal sea la informática, tanto en software, hardware como los servicios informáticos. \nEsta propuesta salarial corresponde al primer trimestre del 2023. "
+            },
+            {
+                "id": "SUB_TITULO_SIM",
+                "text": "Esta herramienta permite simular el salario mínimo que desde AGC proponemos que debe ganar un trabajador informático según sus tareas y responsabilidades. "
+            },
+            {
+                "id": "TITULO_SIM",
+                "text": "Simulá tu piso salarial en pocos pasos."
+            }
+        ],
+        "categoria_laboral": [
+            {
+                "id": "2",
+                "nombre": "Junior",
+                "descripcion": "También llamado Técnico. Tiene alguna experiencia pero requiere cierto nivel de asistencia. A menudo requiere apoyo para completar asignaciones que no sean rutinarias.",
+                "url_icono": "icono_tecnico_junior.svg",
+                "orden_visualizacion": 200
+            },
+            {
+                "id": "3",
+                "nombre": "Semi Senior",
+                "descripcion": "También llamado Técnico Calificado. Tiene experiencia en su campo de ocupación e independencia para abordar problemas conocidos; puede descomponer problemas, buscar posibles soluciones y tiene idea del conjunto del proyecto.",
+                "url_icono": "icono_tecnico_calificado.svg",
+                "orden_visualizacion": 300
+            },
+            {
+                "id": "4",
+                "nombre": "Senior",
+                "descripcion": "También llamado Técnico Especializado. Es el trabajador que en razón de sus conocimientos, tiene las funciones de mayor responsabilidad dentro de un equipo de trabajo. Cuenta con experiencia variada, autonomía y capacidad de brindar apoyo o asistencia a otros.",
+                "url_icono": "icono_tecnico_especializado.svg",
+                "orden_visualizacion": 400
+            }
+        ],
+        "adicional_salarial": [
+            {
+                "id": "1",
+                "nombre": "Antigüedad",
+                "valores": {
+                    "input": {
+                        "max": 35,
+                        "min": 0,
+                        "unidad": " Año/s",
+                        "default": 0
+                    },
+                    "value": 1,
+                    "operacion": "aumento_porcentual_base"
+                },
+                "titulo": "¿Qué antigüedad tenés trabajando para el mismo empleador?",
+                "descripcion": "La antigüedad trabajando con el mismo empleador se reconoce y debe ser valorada. 1% por cada año trabajado. ",
+                "tipo_control": "number",
+                "icono": "antiguedad.svg"
+            },
+            {
+                "id": "2",
+                "nombre": "Idioma Extranjero",
+                "valores": {
+                    "value": 25,
+                    "operacion": "aumento_porcentual_base"
+                },
+                "titulo": "¿Saber idioma extranjero es un requisito para tu puesto de trabajo?",
+                "descripcion": "La comunicación con clientes y colegas es fundamental para el éxito de los proyectos. En caso de que el/la trabajador/a requiera conocimientos de idioma extranjero para el desarrollo de sus tareas, se abonará un 25% más. ",
+                "tipo_control": "switch",
+                "icono": "idioma.svg"
+            },
+            {
+                "id": "3",
+                "nombre": "Títulos",
+                "valores": {
+                    "input": [
+                        {
+                            "text": "Sin titulo específico",
+                            "value": 0
+                        },
+                        {
+                            "text": "Formación Profesional (Certificado)",
+                            "value": 5
+                        },
+                        {
+                            "text": "Pre-Grado (Tecnicatura)",
+                            "value": 10
+                        },
+                        {
+                            "text": "Grado (Licenciatura, Ingeniería) ",
+                            "value": 15
+                        },
+                        {
+                            "text": "Post-Grado (Master, Doctorado) ",
+                            "value": 20
+                        }
+                    ],
+                    "operacion": "aumento_porcentual_base"
+                },
+                "titulo": "¿Tenés titulos formales que certifiquen tus conocimientos en informática? ",
+                "descripcion": "Las certificaciones y títulos específicos que validan tus conocimientos deben ser reconocidos por tu empleador segun su nivel de dificultad/duración. ",
+                "tipo_control": "select",
+                "icono": "formacion.svg"
+            },
+            {
+                "id": "6",
+                "nombre": "Teletrabajo",
+                "valores": {
+                    "value": 5,
+                    "operacion": "aumento_porcentual_base"
+                },
+                "titulo": "¿Trabajás desde tu casa?",
+                "descripcion": "Si realizás la mayor parte de tus actividades de manera remota, te coorresponde una compensación por gastos de teletrabajo tal como indica el artículo 10 de la Ley Nº 27.555.",
+                "tipo_control": "switch",
+                "icono": "teletrabajo.svg"
+            },
+            {
+                "id": "7",
+                "nombre": "Guardería",
+                "valores": {
+                    "input": {
+                        "max": 5,
+                        "min": 0,
+                        "unidad": " Hijo/a/s",
+                        "default": 0
+                    },
+                    "value": 5,
+                    "operacion": "aumento_porcentual_base"
+                },
+                "titulo": "¿Tenés menores a cargo? ¿Cuántos?",
+                "descripcion": "Compensación por gastos de guardería. Aplicable a madres/padres/tutores a cargo de menores de hasta 6 años de edad.",
+                "tipo_control": "number",
+                "icono": "guarderia.svg"
+            },
+            {
+                "id": "8",
+                "nombre": "Liderazgo",
+                "valores": {
+                    "value": 20,
+                    "operacion": "aumento_porcentual_base"
+                },
+                "titulo": "¿Supervisas, Lideras o asistis a otras personas?",
+                "descripcion": "Personas a cargo de manera formal o informal. Responsabilidad sobre el cumplimiento de tareas de otras personas.",
+                "tipo_control": "switch",
+                "icono": "full_stack.svg"
+            },
+            {
+                "id": "dad6e3b0-c44a-4549-af04-a8dbc3467a69",
+                "nombre": "Valor Km por movilidad",
+                "valores": {
+                    "input": {
+                        "max": 999,
+                        "min": 0,
+                        "unidad": " Kms",
+                        "default": 0
+                    },
+                    "value": "202.96",
+                    "operacion": "aumento_absoluto_base"
+                },
+                "titulo": "Valor por km recorrido ",
+                "descripcion": "$202.96 x km",
+                "tipo_control": "number",
+                "icono": "full_stack.svg"
+            }
+        ],
+        "salario_rol_categoria": [
+            {
+                "id": "010ccad7-7c81-4d5d-a8db-c3fa5fd32235",
+                "id_categoria": "3",
+                "id_rol_laboral": "6694ec5d-d543-4f6b-8c4c-5c0d5c85f782",
+                "salario_relativo": 115
+            },
+            {
+                "id": "0190d700-bc0a-42fa-b82b-b920e908674a",
+                "id_categoria": "3",
+                "id_rol_laboral": "984d9c99-a748-472f-be88-6d6377d82d19",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "01bfe6fd-b08d-412b-9acf-1caf8dbcc742",
+                "id_categoria": "3",
+                "id_rol_laboral": "669dd8f4-e08d-4710-b316-e86099e46054",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "093c9ad3-b584-4d0e-9408-491275fec164",
+                "id_categoria": "4",
+                "id_rol_laboral": "1db15595-3a56-4d53-a9ee-9a1491ac9136",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "0f37e048-3ebb-4c8d-8a20-0323c381424b",
+                "id_categoria": "2",
+                "id_rol_laboral": "ac1884a4-a62a-4bc8-b587-64eac8b79988",
+                "salario_relativo": 100
+            },
+            {
+                "id": "12",
+                "id_categoria": "2",
+                "id_rol_laboral": "3",
+                "salario_relativo": 100
+            },
+            {
+                "id": "13",
+                "id_categoria": "3",
+                "id_rol_laboral": "3",
+                "salario_relativo": 115
+            },
+            {
+                "id": "14",
+                "id_categoria": "4",
+                "id_rol_laboral": "3",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "17",
+                "id_categoria": "2",
+                "id_rol_laboral": "4",
+                "salario_relativo": 100
+            },
+            {
+                "id": "18",
+                "id_categoria": "3",
+                "id_rol_laboral": "4",
+                "salario_relativo": 115
+            },
+            {
+                "id": "19",
+                "id_categoria": "4",
+                "id_rol_laboral": "4",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "2",
+                "id_categoria": "2",
+                "id_rol_laboral": "1",
+                "salario_relativo": 100
+            },
+            {
+                "id": "215a3ba8-7dae-4d40-9b14-7c27be454812",
+                "id_categoria": "2",
+                "id_rol_laboral": "e210b1fa-e941-49cf-9962-eaa9ae0e5980",
+                "salario_relativo": 100
+            },
+            {
+                "id": "22",
+                "id_categoria": "2",
+                "id_rol_laboral": "5",
+                "salario_relativo": 100
+            },
+            {
+                "id": "23",
+                "id_categoria": "3",
+                "id_rol_laboral": "5",
+                "salario_relativo": 115
+            },
+            {
+                "id": "24",
+                "id_categoria": "4",
+                "id_rol_laboral": "5",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "26bb46ef-3512-4511-a9d0-f5b7dc3392cf",
+                "id_categoria": "2",
+                "id_rol_laboral": "7adeb360-b674-442e-b87c-5d62b50d46c1",
+                "salario_relativo": 100
+            },
+            {
+                "id": "27",
+                "id_categoria": "2",
+                "id_rol_laboral": "6",
+                "salario_relativo": 100
+            },
+            {
+                "id": "27ea7cc2-98e0-4663-ad7a-a325b8368db6",
+                "id_categoria": "4",
+                "id_rol_laboral": "6694ec5d-d543-4f6b-8c4c-5c0d5c85f782",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "27fc5f32-a141-4aae-9b34-9db2011639de",
+                "id_categoria": "2",
+                "id_rol_laboral": "08244bb7-5cc0-4b5c-a5ad-f8a7d6d5ed9f",
+                "salario_relativo": 100
+            },
+            {
+                "id": "28",
+                "id_categoria": "3",
+                "id_rol_laboral": "6",
+                "salario_relativo": 115
+            },
+            {
+                "id": "29",
+                "id_categoria": "4",
+                "id_rol_laboral": "6",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "2b71fcb2-56eb-420d-8e6b-c7ff22f6f641",
+                "id_categoria": "4",
+                "id_rol_laboral": "e210b1fa-e941-49cf-9962-eaa9ae0e5980",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "2eaf403f-610e-425c-85f7-9b76c3b9e774",
+                "id_categoria": "4",
+                "id_rol_laboral": "84234522-b830-407b-98cd-b4e84f35e442",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "3",
+                "id_categoria": "3",
+                "id_rol_laboral": "1",
+                "salario_relativo": 115
+            },
+            {
+                "id": "32",
+                "id_categoria": "2",
+                "id_rol_laboral": "7",
+                "salario_relativo": 100
+            },
+            {
+                "id": "33",
+                "id_categoria": "3",
+                "id_rol_laboral": "7",
+                "salario_relativo": 115
+            },
+            {
+                "id": "34",
+                "id_categoria": "4",
+                "id_rol_laboral": "7",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "34fb0eee-ac72-4d6a-a549-e5250344fa5b",
+                "id_categoria": "3",
+                "id_rol_laboral": "1db15595-3a56-4d53-a9ee-9a1491ac9136",
+                "salario_relativo": 115
+            },
+            {
+                "id": "37",
+                "id_categoria": "2",
+                "id_rol_laboral": "8",
+                "salario_relativo": 100
+            },
+            {
+                "id": "38",
+                "id_categoria": "3",
+                "id_rol_laboral": "8",
+                "salario_relativo": 115
+            },
+            {
+                "id": "39",
+                "id_categoria": "4",
+                "id_rol_laboral": "8",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "4",
+                "id_categoria": "4",
+                "id_rol_laboral": "1",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "42",
+                "id_categoria": "2",
+                "id_rol_laboral": "9",
+                "salario_relativo": 100
+            },
+            {
+                "id": "43",
+                "id_categoria": "3",
+                "id_rol_laboral": "9",
+                "salario_relativo": 115
+            },
+            {
+                "id": "44",
+                "id_categoria": "4",
+                "id_rol_laboral": "9",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "47",
+                "id_categoria": "2",
+                "id_rol_laboral": "10",
+                "salario_relativo": 100
+            },
+            {
+                "id": "48",
+                "id_categoria": "3",
+                "id_rol_laboral": "10",
+                "salario_relativo": 115
+            },
+            {
+                "id": "483f9cb4-89aa-439a-80f9-e03f7031f066",
+                "id_categoria": "4",
+                "id_rol_laboral": "123130ef-155e-41bc-9c61-8f4372b6dfb3",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "49",
+                "id_categoria": "4",
+                "id_rol_laboral": "10",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "494a11dd-36a6-4031-9221-6f2f8897a246",
+                "id_categoria": "3",
+                "id_rol_laboral": "62dd65d2-da90-4b81-b85c-a7bdfca53902",
+                "salario_relativo": 115
+            },
+            {
+                "id": "4af59373-5af3-4584-a466-97497170d939",
+                "id_categoria": "4",
+                "id_rol_laboral": "7adeb360-b674-442e-b87c-5d62b50d46c1",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "52",
+                "id_categoria": "2",
+                "id_rol_laboral": "11",
+                "salario_relativo": 100
+            },
+            {
+                "id": "52ae7a6b-ff03-45b1-9227-de5b890795c8",
+                "id_categoria": "2",
+                "id_rol_laboral": "9fe87eee-c4f6-4250-909a-3a8db7beebf1",
+                "salario_relativo": 134.28
+            },
+            {
+                "id": "53",
+                "id_categoria": "3",
+                "id_rol_laboral": "11",
+                "salario_relativo": 115
+            },
+            {
+                "id": "54",
+                "id_categoria": "4",
+                "id_rol_laboral": "11",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "56aad6b4-1c56-497f-a350-045a212d2a97",
+                "id_categoria": "2",
+                "id_rol_laboral": "0675f99b-fddc-46d9-943d-e3472f02a324",
+                "salario_relativo": 137.16
+            },
+            {
+                "id": "56d8a387-0110-4153-a042-d767a3917983",
+                "id_categoria": "2",
+                "id_rol_laboral": "9fb0644f-b035-44f6-bd25-4c12096d5f46",
+                "salario_relativo": 100
+            },
+            {
+                "id": "57",
+                "id_categoria": "2",
+                "id_rol_laboral": "12",
+                "salario_relativo": 100
+            },
+            {
+                "id": "58",
+                "id_categoria": "3",
+                "id_rol_laboral": "12",
+                "salario_relativo": 115
+            },
+            {
+                "id": "59",
+                "id_categoria": "4",
+                "id_rol_laboral": "12",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "5b958d52-8235-4278-9cc6-253cc69df266",
+                "id_categoria": "4",
+                "id_rol_laboral": "984d9c99-a748-472f-be88-6d6377d82d19",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "62",
+                "id_categoria": "2",
+                "id_rol_laboral": "13",
+                "salario_relativo": 100
+            },
+            {
+                "id": "63",
+                "id_categoria": "3",
+                "id_rol_laboral": "13",
+                "salario_relativo": 115
+            },
+            {
+                "id": "63034212-0dc2-4dea-a0c2-d47f4c049b5a",
+                "id_categoria": "4",
+                "id_rol_laboral": "0675f99b-fddc-46d9-943d-e3472f02a324",
+                "salario_relativo": 137.16
+            },
+            {
+                "id": "64",
+                "id_categoria": "4",
+                "id_rol_laboral": "13",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "670fd97d-e495-4847-b038-5c0ae94456c5",
+                "id_categoria": "4",
+                "id_rol_laboral": "9fb0644f-b035-44f6-bd25-4c12096d5f46",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "6f28e94f-1fb2-4ba6-b8f3-015092e0d6c6",
+                "id_categoria": "2",
+                "id_rol_laboral": "0447f54a-dd20-4505-afdc-d07079d8df4a",
+                "salario_relativo": 134.28
+            },
+            {
+                "id": "6f3f2b56-d54e-4cba-9925-5610133b1a13",
+                "id_categoria": "2",
+                "id_rol_laboral": "1db15595-3a56-4d53-a9ee-9a1491ac9136",
+                "salario_relativo": 100
+            },
+            {
+                "id": "7",
+                "id_categoria": "2",
+                "id_rol_laboral": "2",
+                "salario_relativo": 100
+            },
+            {
+                "id": "7c960f03-dc18-478b-8070-4452af257aa3",
+                "id_categoria": "3",
+                "id_rol_laboral": "9fe87eee-c4f6-4250-909a-3a8db7beebf1",
+                "salario_relativo": 134.28
+            },
+            {
+                "id": "8",
+                "id_categoria": "3",
+                "id_rol_laboral": "2",
+                "salario_relativo": 115
+            },
+            {
+                "id": "88fcc1fe-a54b-4443-b9e1-7fcf1daa92f2",
+                "id_categoria": "4",
+                "id_rol_laboral": "9fe87eee-c4f6-4250-909a-3a8db7beebf1",
+                "salario_relativo": 134.28
+            },
+            {
+                "id": "89885744-d3a1-4a5e-a643-16aea411c10b",
+                "id_categoria": "4",
+                "id_rol_laboral": "08244bb7-5cc0-4b5c-a5ad-f8a7d6d5ed9f",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "8eff5e5e-3877-4b28-a366-bef619a2ad01",
+                "id_categoria": "3",
+                "id_rol_laboral": "123130ef-155e-41bc-9c61-8f4372b6dfb3",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "9",
+                "id_categoria": "4",
+                "id_rol_laboral": "2",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "93ae05db-978f-44c0-9ae4-c5c54e5ab7d2",
+                "id_categoria": "3",
+                "id_rol_laboral": "0675f99b-fddc-46d9-943d-e3472f02a324",
+                "salario_relativo": 137.16
+            },
+            {
+                "id": "9448b58c-8621-4df3-a439-835e5d1a69ed",
+                "id_categoria": "3",
+                "id_rol_laboral": "7adeb360-b674-442e-b87c-5d62b50d46c1",
+                "salario_relativo": 115
+            },
+            {
+                "id": "9d823f00-9cc9-4a0d-b74d-d35fed3f8dcb",
+                "id_categoria": "3",
+                "id_rol_laboral": "e210b1fa-e941-49cf-9962-eaa9ae0e5980",
+                "salario_relativo": 115
+            },
+            {
+                "id": "a2b2bbd6-fce7-4f18-a9c4-02060fe83001",
+                "id_categoria": "4",
+                "id_rol_laboral": "ac1884a4-a62a-4bc8-b587-64eac8b79988",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "a3be0d04-f372-4efd-b15c-b6ec21ac5fa4",
+                "id_categoria": "2",
+                "id_rol_laboral": "984d9c99-a748-472f-be88-6d6377d82d19",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "a73f08c1-21e8-4102-9886-70b92ca60567",
+                "id_categoria": "4",
+                "id_rol_laboral": "62dd65d2-da90-4b81-b85c-a7bdfca53902",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "adbad470-2fab-4765-a183-767a1c20b7ce",
+                "id_categoria": "2",
+                "id_rol_laboral": "62dd65d2-da90-4b81-b85c-a7bdfca53902",
+                "salario_relativo": 100
+            },
+            {
+                "id": "b1d7fd4f-284f-49af-b251-c2c287a7ab7f",
+                "id_categoria": "3",
+                "id_rol_laboral": "9fb0644f-b035-44f6-bd25-4c12096d5f46",
+                "salario_relativo": 115
+            },
+            {
+                "id": "b4c08c31-35a8-4c69-ac41-c96767cc49d8",
+                "id_categoria": "2",
+                "id_rol_laboral": "123130ef-155e-41bc-9c61-8f4372b6dfb3",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "b9444144-3390-41a9-b014-b3913400f4ff",
+                "id_categoria": "2",
+                "id_rol_laboral": "84234522-b830-407b-98cd-b4e84f35e442",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "be04341d-3793-42b5-ab6e-73c4ecbc46be",
+                "id_categoria": "3",
+                "id_rol_laboral": "ac1884a4-a62a-4bc8-b587-64eac8b79988",
+                "salario_relativo": 115
+            },
+            {
+                "id": "be6ce30f-5f98-44ed-a3b8-dc5c5ff31989",
+                "id_categoria": "3",
+                "id_rol_laboral": "08244bb7-5cc0-4b5c-a5ad-f8a7d6d5ed9f",
+                "salario_relativo": 115
+            },
+            {
+                "id": "c152dff4-9a8a-4884-a162-ef2d7841bbd8",
+                "id_categoria": "4",
+                "id_rol_laboral": "0447f54a-dd20-4505-afdc-d07079d8df4a",
+                "salario_relativo": 134.28
+            },
+            {
+                "id": "d8a22aec-68c1-4ec8-a5d3-bea90b12ef62",
+                "id_categoria": "2",
+                "id_rol_laboral": "669dd8f4-e08d-4710-b316-e86099e46054",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "f2908caf-28b3-4ec3-9a7d-bc64fab088fb",
+                "id_categoria": "2",
+                "id_rol_laboral": "6694ec5d-d543-4f6b-8c4c-5c0d5c85f782",
+                "salario_relativo": 100
+            },
+            {
+                "id": "f551d72f-00b5-40af-97c6-1bccd223f05c",
+                "id_categoria": "3",
+                "id_rol_laboral": "84234522-b830-407b-98cd-b4e84f35e442",
+                "salario_relativo": 132.25
+            },
+            {
+                "id": "f7fa3bf1-1602-4d9a-9405-d552a9d731e2",
+                "id_categoria": "3",
+                "id_rol_laboral": "0447f54a-dd20-4505-afdc-d07079d8df4a",
+                "salario_relativo": 134.28
+            },
+            {
+                "id": "fe55e11c-757a-4980-ab7a-54a77a9cd4a9",
+                "id_categoria": "4",
+                "id_rol_laboral": "669dd8f4-e08d-4710-b316-e86099e46054",
+                "salario_relativo": 132.25
+            }
+        ]
+    }
+}
