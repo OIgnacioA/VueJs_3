@@ -1,20 +1,17 @@
 <template>
     <div class="container">
-      <h4>Suma de los números ingresados:</h4>
-      <p>{{ suma }}</p>
+      <h4>Respuesta del cálculo:</h4>
+      <p>{{ respuesta }}</p>
     </div>
   </template>
   
   <script>
-  import { mapGetters } from 'vuex';
+  //import { mapActions } from 'vuex';
   
   export default {
     computed: {
-      ...mapGetters(['getInputData']),
-      suma() {
-        const inputData = this.getInputData;
-        const suma = parseFloat(inputData.input1 || 0) + parseFloat(inputData.input2 || 0) + parseFloat(inputData.input3 || 0);
-        return suma;
+      respuesta() {
+        return this.$store.dispatch('realizarCalculo');
       }
     }
   };
@@ -22,4 +19,5 @@
   
   <style scoped lang="scss">
   @import '@/assets/scss/estilos.modules.scss';
-</style>
+  </style>
+  
