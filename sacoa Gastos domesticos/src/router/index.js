@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Calculadora from '../views/CaluladoraView.vue'
+import zacoa from '../views/ZacoaView.vue'
 
 
 const routes = [
@@ -10,9 +10,9 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/Calculadora',
-    name: 'Calculadora',
-    component : Calculadora
+    path: '/Zacoa',
+    name: 'Zacoa',
+    component : zacoa
   }
 ]
 
