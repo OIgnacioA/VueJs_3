@@ -1,18 +1,33 @@
 <template>
     <div class="container">
       <h4>Respuesta del cálculo:</h4>
-      <p>{{ respuesta }}</p>
+      <p v-if="resultado !== null">{{ resultado }}</p>
+      <button @click="realizarCalculo">Calcular</button>
     </div>
   </template>
   
-  <script>
-  //import { mapActions } from 'vuex';
+  <script setup>
+  import { useStore } from 'vuex';
+  import { ref } from 'vue';
   
-  export default {
-    computed: {
-      respuesta() {
-        return this.$store.dispatch('realizarCalculo');
-      }
+  const store = useStore();
+  
+  // Crear una referencia a resultado
+  const resultado = ref(null);
+  
+  const realizarCalculo = async () => {
+    resultado.value = await store.dispatch('realizarCalculo');
+    console.log(resultado.value);
+    // Forzar la actualización de la vista manualmente
+    forceUpdate();
+  };
+  
+  // Función para forzar la actualización de la vista
+  const forceUpdate = () => {
+    try {
+      this.$forceUpdate();
+    } catch (error) {
+      console.error("Error al forzar la actualización de la vista:", error);
     }
   };
   </script>

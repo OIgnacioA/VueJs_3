@@ -6,7 +6,9 @@ export default createStore({
       input1: '',
       input2: '',
       input3: ''
-    }
+    },
+    mensaj: null,
+    originalInicial: 10000, // Almacenar el valor inicial de Original
   },
   getters: {
     getInputData: state => state.inputData
@@ -15,7 +17,10 @@ export default createStore({
     setInputData(state, payload) {
       state.inputData = payload;
       
-    }
+    },
+    setMensajes(state, mensaj) {
+      state.mensaj = mensaj;
+    },
   },
 
 
@@ -27,29 +32,48 @@ export default createStore({
   
     realizarCalculo({ state }) {
 
-      let Original = 10000;
+
+      let Original = state.originalInicial;
+      state.mensaj = Original;
+
+
 
       const inputData = state.inputData;
-      const resu = parseFloat(inputData.input1 || 0) / 2;
+      let resu = parseFloat(inputData.input1 || 0);
       const dato1 = parseFloat(inputData.input2 || 0);
       const dato2 = parseFloat(inputData.input3 || 0);
       let respuesta;
 
-      if (dato1 > dato2) {
-        respuesta = dato1 - resu;
-        console.log("Antonella debe: " + respuesta+ " a Oscar")
-        Original = Original - respuesta;
-        console.log("Deuda Original: " + Original )
-      } else if (dato1 < dato2) {
-        respuesta = dato2 - resu;
-        console.log("Oscar debe: " + respuesta + " a Antonella")
-        Original = Original + respuesta;
-        console.log("Deuda Original: " + Original )
-      } else {
-        console.log( "No hay deuda");
+
+      if ((dato1 != null) || dato1 == 0){
+        resu = resu/2;
       }
 
-      return respuesta;
+      if((dato1 + dato2) != parseFloat(inputData.input1)){
+
+        Original =  "los montos no suman la cantidad correcta"; 
+
+      }else {
+
+        if (dato1 > dato2) {
+
+          respuesta = dato1 - resu;      
+          Original = Original - respuesta;
+     
+         
+        } else if (dato1 < dato2) {
+  
+          respuesta = dato2 - resu;
+          Original = Original + respuesta; 
+    
+        } else {
+          console.log( "No hay deuda");
+        }
+
+      }
+      
+
+      return Original;
     }
   }
 })
