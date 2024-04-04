@@ -5,10 +5,12 @@ export default createStore({
     inputData: {
       input1: '',
       input2: '',
-      input3: ''
+      input3: '',
+      tipoDePago:null,
     },
     mensaj: null,
     originalInicial: 10000, // Almacenar el valor inicial de Original
+    
   },
   getters: {
     getInputData: state => state.inputData
@@ -21,22 +23,26 @@ export default createStore({
     setMensajes(state, mensaj) {
       state.mensaj = mensaj;
     },
+    setTipoDePago(state, tipoDePago) {
+      state.inputData.tipoDePago = tipoDePago; // Actualizar tipoDePago en inputData
+    },
   },
 
 
   actions: {
     updateInputData({ commit }, newData) {
       commit('setInputData', newData);
-
+      commit('setTipoDePago', newData.tipoDePago); // Llamar a la mutación setTipoDePago
     },
   
     realizarCalculo({ state }) {
 
 
       let Original = state.originalInicial;
+      let Tipo = state.inputData.tipoDePago; // Obtener tipoDePago desde el estado
       state.mensaj = Original;
 
-
+      console.log(Tipo);
 
       const inputData = state.inputData;
       let resu = parseFloat(inputData.input1 || 0);
@@ -45,15 +51,18 @@ export default createStore({
       let respuesta;
 
 
-      if ((dato1 != null) || dato1 == 0){
-        resu = resu/2;
-      }
+    
 
       if((dato1 + dato2) != parseFloat(inputData.input1)){
 
         Original =  "los montos no suman la cantidad correcta"; 
 
       }else {
+
+
+        if (Tipo == "dividido"){
+          resu = resu/2;
+        }
 
         if (dato1 > dato2) {
 
