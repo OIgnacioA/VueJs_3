@@ -23,16 +23,14 @@ export default createStore({
     setMensajes(state, mensaj) {
       state.mensaj = mensaj;
     },
-    setTipoDePago(state, tipoDePago) {
-      state.inputData.tipoDePago = tipoDePago; // Actualizar tipoDePago en inputData
-    },
+
   },
 
 
   actions: {
     updateInputData({ commit }, newData) {
       commit('setInputData', newData);
-      commit('setTipoDePago', newData.tipoDePago); // Llamar a la mutación setTipoDePago
+      
     },
   
     realizarCalculo({ state }) {
@@ -42,45 +40,59 @@ export default createStore({
       let Tipo = state.inputData.tipoDePago; // Obtener tipoDePago desde el estado
       state.mensaj = Original;
 
-      console.log(Tipo);
+     
 
       const inputData = state.inputData;
-      let resu = parseFloat(inputData.input1 || 0);
+      let Total = parseFloat(inputData.input1 || 0);
       const dato1 = parseFloat(inputData.input2 || 0);
       const dato2 = parseFloat(inputData.input3 || 0);
       let respuesta;
 
 
-    
+      if(dato1 == 0 && dato2 == 0){
 
-      if((dato1 + dato2) != parseFloat(inputData.input1)){
+     
+        Original =  "debes colocar al menos un monto en los usuarios"; 
+      }else if ((dato1 + dato2) != parseFloat(inputData.input1)) {
 
         Original =  "los montos no suman la cantidad correcta"; 
 
-      }else {
+      } else {
 
 
-        if (Tipo == "dividido"){
-          resu = resu/2;
-        }
+        if (Tipo == "dividido"){ //Cuenta dividida
+          Total = Total/2;
 
-        if (dato1 > dato2) {
+          if (dato1 > dato2) {
 
-          respuesta = dato1 - resu;      
-          Original = Original - respuesta;
-     
-         
-        } else if (dato1 < dato2) {
-  
-          respuesta = dato2 - resu;
-          Original = Original + respuesta; 
+            respuesta = dato1 - Total;      
+            Original = Original - respuesta;
+       
+           
+          } else if (dato1 < dato2) {
     
-        } else {
-          console.log( "No hay deuda");
-        }
-
-      }
+            respuesta = dato2 - Total;
+            Original = Original + respuesta; 
       
+          } else {
+            console.log( "No hay deuda");
+          }
+        }else { //Gasto total de una de las partes
+
+
+          if (dato1 == null || dato1 == 0) {
+
+                
+            Original = Original + Total;
+       
+           
+          } else if (dato2 == null || dato2 == 0) {
+    
+            Original = Original - Total;
+      
+          } 
+        }
+      }
 
       return Original;
     }
