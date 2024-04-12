@@ -26,7 +26,7 @@
     let NuevaT = {Nombre : tareaNueva.value, Id : contador.value}; 
    
     store.dispatch('agregarNueva', NuevaT);
-
+    tareaNueva.value = "";
   }
   
   

@@ -13,15 +13,26 @@ export default createStore({
      
     },
 
-    setCambio(state, { id, nombre }) {
-      state.Tarea = state.Tarea.map(tarea => {
-        if (tarea.Id === id) {
-          tarea.Nombre = nombre;
-        }
-        
-        return tarea;
-      });
+    setNombreTarea(state, payload) {
+      const tareaModificada = state.Tarea.find(tarea => tarea.Id === payload.Id);
+
+      console.log(payload.Id);
+      if (tareaModificada) {
+        tareaModificada.Nombre = payload.nuevoNombre;
+      }
+      console.log(state.Tarea.Id)
+      
+    },
+
+
+    SetBorrar(state, payload) {
+      console.log("---->" + payload)
+      state.Tarea = state.Tarea.filter(tarea => tarea.Id !== payload.Id);
+      console.log(JSON.parse(JSON.stringify(state.Tarea)))
     }
+    
+    
+  
   },
   actions: {
     agregarNueva({commit}, nueva){
@@ -30,10 +41,16 @@ export default createStore({
     },
 
     Modificacion({commit}, cambio){
-      commit('setCambio', cambio)
-      
-    }
 
+      commit('setNombreTarea', cambio)
+      
+    },
+
+    borrarContenido({commit}, cambio){
+
+      commit('SetBorrar', cambio)
+      
+    },
 
 
   },
