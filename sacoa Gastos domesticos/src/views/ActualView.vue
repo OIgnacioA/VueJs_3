@@ -12,7 +12,7 @@
   const resultado = ref(null);
   
   onMounted(() => {
-    resultado.value = store.state.originalInicial;
+    resultado.value = store.state.Monto;
   });
   </script>
   
