@@ -51,8 +51,8 @@ export default createStore({
 
       if(dato1 == 0 && dato2 == 0){
 
-     
         Original =  "debes colocar al menos un monto en los usuarios"; 
+
       }else if ((dato1 + dato2) != parseFloat(inputData.input1)) {
 
         Original =  "los montos no suman la cantidad correcta"; 

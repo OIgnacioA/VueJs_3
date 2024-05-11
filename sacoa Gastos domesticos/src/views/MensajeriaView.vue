@@ -1,14 +1,15 @@
 <template>
-    <div>
-      <h2>{{ mensaje }}</h2>
+    <div class="container">
+      <label for="nombre">Datos Adicionales:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
     </div>
   </template>
   
   <script setup>
-  import { useStore } from 'vuex';
-  
-  const store = useStore();
-  
-  const mensaje = store.state.mensaj;
+
   </script>
   
+
+  <style scoped lang="scss">
+  @import '@/assets/scss/estilo.module.scss';
+  </style>
