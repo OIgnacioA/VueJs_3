@@ -1,63 +1,45 @@
-import { createStore } from 'vuex'
+// store/index.js
+import { createStore } from 'vuex';
+import { db } from '../firebaseConfig'; // Importa la configuración de Firebase
+import { collection, addDoc } from 'firebase/firestore'; // Importa las funciones necesarias de Firestore
 
 export default createStore({
   state: {
-    inputData: [], 
-    Notas:null,
-    Monto: 10000, // Almacenar el valor inicial de Original
+    inputData: [],
+    Notas: null,
+    Monto: 10000,
   },
-
   getters: {
-    getInputData (state) { 
+    getInputData(state) {
       return state.inputData;
     }
   },
-
-
   mutations: {
-
- 
-    setDatos(state, payload){
-
+    setDatos(state, payload) {
       state.inputData.push(payload);
-      
-
     },
-
-    setNotas(state, payload){
-
-      state.Notas = payload; 
-      
+    setNotas(state, payload) {
+      state.Notas = payload;
     }
-
   },
-
-
   actions: {
-
-    MostrarData({commit}, datos) {
-     
-       commit('setDatos', datos)
-
+    MostrarData({ commit }, datos) {
+      commit('setDatos', datos);
     },
-
-    AddNotas({commit}, datos2){
-
+    AddNotas({ commit }, datos2) {
       commit('setNotas', datos2);
-
     },
+    async GenerarJson(context) {
+      const Json1 = context.state;
+      console.log("--->", Json1);
 
-    GenerarJson(context){
-
-     //let MontoNuevo = state.inputData.Monto; 
-     
-     console.log(context.state.inputData[0]);
-     console.log(context.state.Notas);
-
-
-
+      try {
+        // Sube el JSON a Firebase Firestore
+        const docRef = await addDoc(collection(db, "yourCollectionName"), Json1);
+        console.log("Document successfully written with ID: ", docRef.id);
+      } catch (error) {
+        console.error("Error writing document: ", error);
+      }
     }
-
-   
   }
-})
+});
