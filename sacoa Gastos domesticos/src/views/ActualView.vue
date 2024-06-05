@@ -5,15 +5,11 @@
   </template>
   
   <script setup>
-  import { ref, onMounted } from 'vue';
+  import { computed } from 'vue';
   import { useStore } from 'vuex';
   
   const store = useStore();
-  const resultado = ref(null);
-  
-  onMounted(() => {
-    resultado.value = store.state.Monto;
-  });
+  const resultado = computed(() => store.state.Monto);
   </script>
   
   <style scoped lang="scss">

@@ -6,6 +6,16 @@
   <router-view/>
 </template>
 
+<script setup>
+import { useStore } from 'vuex';
+
+const store = useStore();
+
+// Llama a la acción para obtener el último documento al montar la aplicación
+store.dispatch('fetchLastDocument');
+</script>
+
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
