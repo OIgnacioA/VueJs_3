@@ -59,7 +59,7 @@ const realizarCalculo = () => {
   store.dispatch('MostrarData', info);
 
   
-  input1Value.value = "";
+   input1Value.value = "";
 }
 
 
