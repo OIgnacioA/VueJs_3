@@ -13,6 +13,7 @@ const store = useStore();
 
 // Llama a la acción para obtener el último documento al montar la aplicación
 store.dispatch('fetchLastDocument');
+store.dispatch('fetchLastNotes');
 </script>
 
 

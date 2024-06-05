@@ -21,7 +21,7 @@
         <input type="radio" v-model="tipoDePago" value="full" @change="updateStore" name="tipoDePago"> Full
       </label>
     </div><br>
-    <button @click="realizarCalculo()">Ingresar</button><br><br>
+    <button @click="realizarCalculo()">Ingresar en cola</button><br><br>
   </div>
 </template>
 
@@ -39,18 +39,29 @@ let Persona = ref();
 
 const realizarCalculo = () => {
 
+  // Verificar si el valor ingresado es un número
+  if (isNaN(input1Value.value)) {
+    alert('Por favor, ingrese un número válido.');
+    input1Value.value = "";
+    return; // Detener la ejecución de la función si no es un número
+  }
+
+
   if (!Persona.value) {
     Persona.value = 'Oscar';
- }
+  }
 
- if (!tipoDePago.value) {
-  tipoDePago.value = 'Dividido';
- }
+  if (!tipoDePago.value) {
+    tipoDePago.value = 'dividido';
+  }
+  let info = { Monto: input1Value.value, Modalidad: tipoDePago.value, Person: Persona.value };
 
-  let info = { Monto: input1Value.value, Modalidad: tipoDePago.value, Person: Persona.value }
-  store.dispatch('MostrarData', info)
+  store.dispatch('MostrarData', info);
+
+  
   input1Value.value = "";
 }
+
 
 
 </script>
