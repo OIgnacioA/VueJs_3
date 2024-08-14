@@ -1,0 +1,107 @@
+
+ruta de inicio: 
+
+index.html - main.js - router/index.js - stores/sim.js - AppWrapper.vue - App.vue - Inicio.vue
+
+
+
+Sí, entiendo tu estructura y los fragmentos de código que has proporcionado. Ahora, hablemos sobre el fragmento de código en main.js y el enrutador (router/index.js).
+
+En el fragmento de código de main.js:
+
+javascript
+Copy code
+import router from "./router";
+router.beforeEach(function (to, from, next) {
+  next();
+});
+Esto se refiere al enrutador de Vue.js y al uso de beforeEach en las rutas. En Vue Router, beforeEach es una función de gancho que se ejecuta antes de cada navegación de la ruta. En este caso, siempre llama a next(), lo que significa que permite que la navegación continúe sin hacer nada especial.
+
+Ahora, en router/index.js, hay una configuración más avanzada del enrutador:
+
+javascript
+Copy code
+import { createRouter, createWebHistory } from "vue-router";
+import { useSimStore } from "../stores/sim";
+
+// ...
+
+const router = createRouter({
+  history: createWebHistory(),
+  hash: false,
+  routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const simStore = useSimStore()
+  if (to.matched.some(record => record.meta.requireRol) && !simStore.rolSeleccionado) {
+    next({ name: 'Inicio', query: { to: to.path } })
+  } else if (to.matched.some(record => record.meta.requireExperiencia) && !simStore.categoriaSeleccionada) {
+    next({ name: 'Inicio', query: { to: to.path } })
+  }
+  else next()
+})
+
+export default router;
+Aquí, beforeEach está configurado para realizar ciertas comprobaciones antes de cada navegación. En particular:
+
+Verifica si la ruta requiere un rol (requireRol) y si no se ha seleccionado un rol (!simStore.rolSeleccionado). En tal caso, redirige a la página de inicio (Inicio).
+
+Verifica si la ruta requiere experiencia (requireExperiencia) y si no se ha seleccionado una categoría de experiencia (!simStore.categoriaSeleccionada). También redirige a la página de inicio en este caso.
+
+Esta lógica asegura que el usuario tenga la información necesaria antes de acceder a ciertas rutas. Si no cumple con los requisitos, lo redirige a la página de inicio. Es una forma de proteger ciertas partes de la aplicación y garantizar que el estado necesario esté presente antes de acceder a ciertas vistas.
+
+
+-------------------------------------------------------------------------
+
+
+Resumen del uso del Vue Router, beforeEach, createouter, 
+
+createRouter y Configuración Inicial:
+createRouter se utiliza para crear una instancia de enrutador en Vue Router.
+history, hash, y routes son opciones de configuración para esa instancia.
+history configura el modo de historial (en tu caso, usando createWebHistory para el modo de historial basado en la API de historial del navegador).
+hash: false significa que no estás usando el modo de hash en las rutas.
+
+
+const router = createRouter({
+  history: createWebHistory(),
+  hash: false,
+  routes,
+});
+
+
+beforeEach y Navegación Condicional:
+beforeEach es un gancho de navegación que se ejecuta antes de cada cambio de ruta.
+to, from, y next son los argumentos de la función proporcionada a beforeEach.
+Dentro de beforeEach, se verifica cierta lógica antes de permitir que la navegación continúe (next()).
+En tu caso, se están verificando las propiedades meta de las rutas para asegurar que ciertos criterios estén cumplidos antes de permitir el acceso.
+
+router.beforeEach((to, from, next) => {
+  const simStore = useSimStore();
+
+  if (to.matched.some(record => record.meta.requireRol) && !simStore.rolSeleccionado) {
+    next({ name: 'Inicio', query: { to: to.path } });
+  } else if (to.matched.some(record => record.meta.requireExperiencia) && !simStore.categoriaSeleccionada) {
+    next({ name: 'Inicio', query: { to: to.path } });
+  } else {
+    next();
+  }
+});
+meta en las Rutas:
+meta es una propiedad de las rutas que se usa para almacenar información adicional sobre la ruta.
+En tu ejemplo, meta se utiliza para indicar si ciertas condiciones (requireRol, requireExperiencia) deben cumplirse antes de permitir el acceso a la ruta.
+
+{
+  path: "/experiencia",
+  name: 'Experiencia',
+  component: () => import("@/views/Experiencia.vue"),
+  meta: {
+    requireRol: true
+  }
+}
+En cuanto a por qué algunas rutas tienen meta y otras no, depende de los requisitos específicos de cada ruta en tu aplicación. Puedes usar meta para especificar cualquier información adicional necesaria para esa ruta en particular. En el ejemplo, requireRol se utiliza como una condición específica para esa ruta.
+
+En resumen, este beforeEach actúa como un guardián antes de permitir que el usuario navegue a ciertas rutas, asegurándose de que ciertos criterios estén cumplidos antes de permitir el acceso.
+---------------------------------------------------------------
+
